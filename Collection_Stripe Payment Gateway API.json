@@ -1,0 +1,70 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Stripe Payment Gateway API",
+    "dateExported": "2024-02-03T06:01:56.907Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9792f7df-753d-49b2-9734-afc201d41f8f",
+            "colId": "5916bb61-f753-4514-ae5f-59b28dc619be",
+            "containerId": "",
+            "name": "Create Intent",
+            "url": "http://127.0.0.1:5000/api/v1/create_intent",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-02T19:32:39.598Z",
+            "modified": "2024-02-02T19:47:46.571Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"amount\": 2000,\n    \"currency\": \"usd\",\n    \"automatic_payment_methods\": {\"enabled\": true}\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "652071ba-545f-4f00-b693-eac3eac54a2a",
+            "colId": "5916bb61-f753-4514-ae5f-59b28dc619be",
+            "containerId": "",
+            "name": "Get Intents",
+            "url": "http://127.0.0.1:5000/api/v1/get_intents/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-02T19:32:57.354Z",
+            "modified": "2024-02-02T20:44:29.365Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f2760a73-91c6-4e89-b85f-e69356988cbb",
+            "colId": "5916bb61-f753-4514-ae5f-59b28dc619be",
+            "containerId": "",
+            "name": "Capture Intent",
+            "url": "http://127.0.0.1:5000/api/v1/capture_intent/pi_3OfTaySC8Tye0yo41JHLIw4l",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-02T19:53:13.835Z",
+            "modified": "2024-02-02T20:44:53.196Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "276b92a4-5be8-4395-b00e-3498efeb7572",
+            "colId": "5916bb61-f753-4514-ae5f-59b28dc619be",
+            "containerId": "",
+            "name": "Create Refund",
+            "url": "http://127.0.0.1:5000/api/v1/create_refund/pi_3OfTaySC8Tye0yo41JHLIw4l",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-02-02T19:57:54.625Z",
+            "modified": "2024-02-02T20:45:06.757Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
