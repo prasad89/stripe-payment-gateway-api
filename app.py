@@ -5,7 +5,12 @@ import os
 app = Flask(__name__)
 
 # Set the Stripe API key from the environment variable
-stripe.api_key = os.getenv("STRIPE_API_KEY")
+stripe_api_key = os.getenv("STRIPE_API_KEY")
+if stripe_api_key is None:
+    print("Stripe API key not found. Please set the environment variable STRIPE_API_KEY.")
+    exit(1)
+
+stripe.api_key = stripe_api_key
 
 
 @app.route('/api/v1/create_intent', methods=['POST'])
