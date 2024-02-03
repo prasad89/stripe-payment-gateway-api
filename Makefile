@@ -5,8 +5,8 @@ STRIPE_API_KEY?=
 
 dev:
 	pip install -r requirements.txt
-	expose STRIPE_API_KEY=${STRIPE_API_KEY}
-	python app.py
+	export STRIPE_API_KEY=${STRIPE_API_KEY} && \
+	python3 app.py
 
 image_build:
 	docker build -f Dockerfile -t ${REGISTRY_PREFIX}/stripe_payment_gateway_api:$(TAG) .
